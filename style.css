@@ -1,0 +1,188 @@
+/* --- CSS Reset Básico --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Alterado: Corpo principal com a fonte 'Inter' */
+body {
+    font-family: 'Inter', sans-serif; /* <-- FONTE 'INTER' APLICADA */
+    line-height: 1.6;
+    font-weight: 400; /* Peso Padrão (Regular) */
+    
+    /* Melhora a renderização da fonte */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Adicionado: Define o peso dos títulos */
+h1, h2, h3 {
+    font-weight: 800; /* ExtraBold */
+}
+
+/* Container Global (para seções) */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* --- ESTILOS DO CABEÇALHO (NAVBAR) --- */
+.navbar {
+    background-color: #0A2B4C; 
+    padding: 15px 5%; /* <-- CORREÇÃO DO LOGO: Padding nas laterais */
+}
+
+/* CORREÇÃO DO LOGO: Container do navbar ocupa 100% */
+.navbar .container {
+    width: 100%;       
+    max-width: 100%;   
+    margin: 0;         
+    padding: 0;        
+    display: flex;
+    justify-content: space-between; /* Logo na esquerda, nav na direita */
+    align-items: center;
+}
+
+.navbar .logo img {
+    max-height: 50px; 
+}
+
+.navbar nav ul {
+    list-style-type: none; 
+    display: flex; 
+    gap: 25px; 
+}
+
+/* Alterado: Link do menu com o peso 'Inter' Medium */
+.navbar nav a {
+    color: #FFFFFF; 
+    text-decoration: none;
+    font-size: 1rem; 
+    display: flex; 
+    align-items: center;
+    transition: color 0.3s ease;
+    font-weight: 500; /* <-- FONTE 'INTER' (Medium) APLICADA */
+}
+
+.navbar nav a:hover {
+    color: #FFA500;
+}
+
+.navbar nav a i {
+    margin-right: 8px; 
+    font-size: 0.9rem; 
+    opacity: 0.8; 
+}
+
+
+/* --- ESTILO DO BOTÃO CTA (Laranja) --- */
+.cta-button {
+    display: inline-block;
+    background-color: #FFA500; 
+    color: #0A2B4C; 
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    font-weight: 500; /* <-- FONTE 'INTER' (Medium) APLICADA */
+}
+
+.cta-button:hover {
+    background-color: #e69500; 
+    transform: scale(1.05); 
+}
+
+/* --- SEÇÃO HERO --- */
+.hero-section {
+    background-image: url('CZS.jpg'); 
+    background-size: cover;
+    background-position: center;
+    color: black; 
+    padding: 100px 0;
+    text-align: center;
+}
+
+/* Alterado: Título Hero com o peso 'Inter' ExtraBold */
+.hero-section h1 {
+    font-size: 2.5rem;
+    max-width: 800px;
+    margin: 0 auto; 
+    font-weight: 800; /* <-- FONTE 'INTER' (ExtraBold) APLICADA */
+    line-height: 1.3; 
+}
+
+/* --- SEÇÃO DE SERVIÇOS --- */
+.services-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.services-section h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.service-item {
+    background-color: #f4f4f4; 
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center; 
+    transition: all 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0); 
+}
+
+.service-item i {
+    font-size: 2.5rem; 
+    color: #FFA500; 
+    margin-bottom: 20px; 
+}
+
+.service-item h3 {
+    margin-bottom: 10px;
+    color: #0A2B4C; 
+}
+
+/* --- SEÇÃO SOBRE --- */
+.about-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.about-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* --- SEÇÃO CONTATO --- */
+.contact-section {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #0A2B4C; 
+    color: #FFFFFF;
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* --- RODAPÉ --- */
+footer {
+    padding: 20px 0;
+    text-align: center;
+    background-color: #333;
+    color: #FFFFFF;
+}
